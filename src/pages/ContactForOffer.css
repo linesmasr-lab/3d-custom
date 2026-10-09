@@ -1,0 +1,138 @@
+.page .offer-page__title {
+  font-size: clamp(34px, 3.8vw, 56px);
+  line-height: 1.08;
+}
+
+.offer-page__free {
+  display: inline-block;
+  padding: 0 10px;
+  border-radius: 4px;
+  background: var(--c-blue);
+  color: var(--c-white);
+}
+
+.offer-page__media {
+  margin: 0 calc(var(--gutter) * -0.5) 0 0;
+}
+
+.offer-page__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+  gap: 64px;
+  align-items: start;
+}
+
+.offer-page__content {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+
+.offer-block {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.page .offer-block__title {
+  font-size: clamp(24px, 2.4vw, 32px);
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+  color: var(--c-dark);
+}
+
+.offer-benefits {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-bottom: 1px solid var(--c-border);
+}
+
+.offer-benefits li {
+  position: relative;
+  padding: 18px 0 18px 26px;
+  border-top: 1px solid var(--c-border);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--c-text-2);
+}
+
+.offer-benefits li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 27px;
+  width: 10px;
+  height: 2px;
+  background: var(--c-blue);
+}
+
+.offer-benefits strong {
+  font-weight: 500;
+  color: var(--c-dark);
+}
+
+.offer-note {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 28px;
+  border-radius: var(--radius);
+  background: var(--c-light);
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--c-text-2);
+}
+
+.offer-note__contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 40px;
+  margin: 0;
+}
+
+.offer-note__contact dt {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.offer-note__contact dd {
+  margin: 4px 0 0;
+  font-size: 15px;
+}
+
+/* Keeps the form clear of the sticky navbar when jumped to */
+.offer-page__form {
+  scroll-margin-top: calc(var(--nav-h) + 24px);
+}
+
+.offer-page__phone .form-field:first-child {
+  flex: 0 0 42%;
+}
+
+@media (max-width: 1080px) {
+  .offer-page__media {
+    margin: 0;
+  }
+
+  .offer-page__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .offer-page__content {
+    gap: 48px;
+  }
+
+  .offer-page__phone .form-field:first-child {
+    flex: 1;
+  }
+
+  .offer-page .page-hero__copy .btn {
+    width: 100%;
+  }
+}

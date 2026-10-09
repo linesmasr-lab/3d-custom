@@ -1,0 +1,41 @@
+.contact__grid {
+  align-items: start;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+}
+
+.contact .detail-list {
+  max-width: 480px;
+  border-bottom: 1px solid var(--c-border);
+}
+
+.contact__image {
+  margin-top: 16px;
+}
+
+.contact__image .plate__frame {
+  aspect-ratio: 16 / 9;
+  background: #e0e2df;
+}
+
+@media (max-width: 1080px) {
+  .contact__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .contact .detail-list {
+    max-width: none;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    column-gap: 24px;
+  }
+
+  /* On smaller screens the form comes before the photo */
+  .contact__image {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .contact .detail-list {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

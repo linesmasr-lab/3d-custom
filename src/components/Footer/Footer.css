@@ -1,0 +1,114 @@
+.footer {
+  flex-shrink: 0;
+  background: var(--c-footer);
+  color: var(--c-white);
+  text-align: left;
+}
+
+.footer__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.618fr) repeat(3, minmax(0, 1fr));
+  gap: 48px;
+  padding-top: 88px;
+  padding-bottom: 56px;
+}
+
+.footer__brand {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer__logo {
+  display: inline-flex;
+  text-decoration: none;
+}
+
+.footer__brand p {
+  max-width: 360px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--c-text-on-dark);
+}
+
+.footer .footer__heading {
+  margin: 0 0 12px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--c-text-on-dark);
+}
+
+.footer__col ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer__col li a,
+.footer__col address a {
+  color: var(--c-text-on-dark);
+  text-decoration: none;
+  font-size: 15px;
+  line-height: 2.2;
+}
+
+.footer__col li a:hover,
+.footer__col address a:hover {
+  color: var(--c-white);
+}
+
+.footer__col address {
+  display: flex;
+  flex-direction: column;
+  font-style: normal;
+  font-size: 15px;
+  line-height: 2.2;
+}
+
+.footer__col address span {
+  color: var(--c-white);
+}
+
+.footer__bottom {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 24px 0 40px;
+  border-top: 1px solid var(--c-border-dark);
+  font-size: 13px;
+  color: var(--c-text-on-dark);
+}
+
+.footer__keywords {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 1080px) {
+  .footer__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .footer__brand {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 640px) {
+  .footer__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 36px 24px;
+    padding-top: 64px;
+  }
+
+  .footer__col--contact {
+    grid-column: 1 / -1;
+  }
+}

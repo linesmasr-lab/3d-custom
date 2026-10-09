@@ -1,0 +1,62 @@
+.about-hero__frame {
+  aspect-ratio: 3 / 2;
+  background: #e6e6e6;
+}
+
+.about-story__text {
+  font-size: clamp(19px, 1.7vw, 24px);
+  line-height: 1.55;
+  color: var(--c-dark);
+}
+
+.about-pillars {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 48px;
+  margin-top: 80px;
+}
+
+.about-pillar {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-top: 24px;
+  border-top: 1px solid var(--c-dark);
+}
+
+.about-pillar__text {
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--c-text-2);
+}
+
+.about-touch {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.about-touch .stack {
+  max-width: 640px;
+}
+
+@media (max-width: 1080px) {
+  .about-pillars {
+    margin-top: 56px;
+  }
+}
+
+@media (max-width: 640px) {
+  .about-pillars {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 32px;
+    margin-top: 48px;
+  }
+
+  .about-touch__actions,
+  .about-touch__actions .btn {
+    width: 100%;
+  }
+}

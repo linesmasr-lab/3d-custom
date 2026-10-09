@@ -1,0 +1,11 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+# Single-page app: any page URL (e.g. /services) is served by index.html and
+# React Router shows the right page. Real files such as /__forms.html and the
+# images are still served as themselves.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

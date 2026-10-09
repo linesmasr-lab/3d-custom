@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="robots" content="noindex" />
+    <title>Form definitions</title>
+  </head>
+  <body>
+    <!--
+      Netlify reads these hidden forms at deploy time to learn each form's
+      fields. The real forms are rendered by React and post to this file.
+      If you add or rename a field in a React form, change it here too.
+    -->
+    <form name="home-inquiry" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="hidden" name="subject" />
+      <input name="bot-field" />
+      <input name="First Name" />
+      <input name="Last Name" />
+      <input type="email" name="Email" />
+      <input name="Phone Country" />
+      <input name="Phone Area" />
+      <input name="Phone Prefix" />
+      <input name="Phone Line" />
+      <textarea name="Message"></textarea>
+    </form>
+
+    <form name="contact" data-netlify="true" netlify-honeypot="bot-field" enctype="multipart/form-data" hidden>
+      <input type="hidden" name="subject" />
+      <input name="bot-field" />
+      <input name="First Name" />
+      <input name="Last Name" />
+      <input type="email" name="Email" />
+      <input name="Phone" />
+      <textarea name="Message"></textarea>
+      <input type="file" name="File Upload" />
+    </form>
+
+    <form name="free-floorplan-offer" data-netlify="true" netlify-honeypot="bot-field" enctype="multipart/form-data" hidden>
+      <input type="hidden" name="subject" />
+      <input name="bot-field" />
+      <input name="First Name" />
+      <input name="Last Name" />
+      <input type="email" name="Email" />
+      <textarea name="Message"></textarea>
+      <input name="Phone Country" />
+      <input name="Phone Number" />
+      <input name="Address Country" />
+      <input name="Address Line 1" />
+      <input name="Address Line 2" />
+      <input name="City" />
+      <input name="State" />
+      <input name="ZIP Code" />
+      <input type="file" name="File Upload" />
+      <input type="date" name="Date" />
+    </form>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+/* ---------- Order received (after Stripe checkout) ---------- */
+.order-page__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr);
+  gap: 48px;
+  align-items: start;
+}
+
+.order-page__steps {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 0;
+  padding-left: 20px;
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+@media (max-width: 860px) {
+  .order-page__grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 32px;
+  }
+}

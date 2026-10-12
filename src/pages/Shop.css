@@ -86,8 +86,8 @@
   opacity: 1;
 }
 
-.shop-product:hover .shop-product__image:not(.shop-product__hover),
-.shop-product:focus-visible .shop-product__image:not(.shop-product__hover) {
+.shop-product--swap:hover .shop-product__image:not(.shop-product__hover),
+.shop-product--swap:focus-visible .shop-product__image:not(.shop-product__hover) {
   opacity: 0;
 }
 
@@ -136,4 +136,14 @@
   .shop__section {
     padding-top: 40px;
   }
+}
+
+.shop-product__detail {
+  font-size: 14px;
+  color: var(--c-text-2);
+}
+
+.shop__note {
+  margin: 32px 0 0;
+  color: var(--c-text-2);
 }

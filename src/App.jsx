@@ -10,6 +10,7 @@ import Faqs from './pages/Faqs.jsx'
 import Shop from './pages/Shop.jsx'
 import Work from './pages/Work.jsx'
 import ContactForOffer from './pages/ContactForOffer.jsx'
+import OrderReceived from './pages/OrderReceived.jsx'
 import NotFound from './pages/NotFound.jsx'
 
 // TEMPORARY: these pages don't exist yet, so their links forward to the
@@ -37,6 +38,7 @@ function App() {
         <Route path="/faqs" element={<Faqs />} />
         <Route path="/shop" element={<Shop />} />
         <Route path="/contact-for-offer" element={<ContactForOffer />} />
+        <Route path="/order-received" element={<OrderReceived />} />
         {temporaryRedirects.map(({ from, to }) => (
           <Route key={from} path={from} element={<Navigate to={to} replace />} />
         ))}

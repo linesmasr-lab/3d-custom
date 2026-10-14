@@ -7,8 +7,9 @@ import officeRealistic from '../assets/work/sample-office-realistic.webp';
 import lRealistic from '../assets/work/sample-l-realistic.webp';
 import hospital from '../assets/work/sample-hospital.webp';
 import school from '../assets/work/sample-school.webp';
-import chiller from '../assets/work/sample-chiller.webp';
 import chillerCutaway from '../assets/work/sample-chiller-cutaway.webp';
+import boilerCutaway from '../assets/work/sample-boiler-cutaway.webp';
+import basLive from '../assets/work/sample-bas-live.webp';
 import './Work.css';
 
 // Sample renders that show the two styles we offer
@@ -27,8 +28,8 @@ const realisticStyle = [
 ];
 
 const equipment = [
-  { image: chiller, title: 'Water-cooled chiller', detail: 'Detailed equipment model ready for live temperature and status points.', contain: true },
-  { image: chillerCutaway, title: 'Chiller cutaway, animated', detail: 'Animated cutaway showing water flow through the evaporator tubes.', contain: true },
+  { image: chillerCutaway, title: 'Chiller cutaway, animated', detail: 'Animated cutaway showing chilled water flowing through the evaporator.', contain: true },
+  { image: boilerCutaway, title: 'Fire-tube boiler cutaway, animated', detail: 'Animated burner flame and water side, ready for live firing and temperature points.', contain: true },
 ];
 
 function Gallery({ items }) {
@@ -69,6 +70,22 @@ function Work() {
             </p>
           </div>
         </div>
+      </section>
+
+      <section className="page-section">
+        <div className="container work-heading">
+          <h2 className="page-subtitle">How it looks in your BAS</h2>
+        </div>
+        <Gallery
+          items={[
+            {
+              image: basLive,
+              title: 'Live floor graphic with zone temperatures',
+              detail: 'The 3D floor plan as the operator sees it: every VAV tagged, zones colored by temperature, alarms and AHU data around it.',
+              wide: true,
+            },
+          ]}
+        />
       </section>
 
       <section className="page-section">

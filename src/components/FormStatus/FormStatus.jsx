@@ -2,12 +2,12 @@ import { useEffect, useRef } from 'react';
 import { siteInfo } from '../../siteInfo.js';
 import './FormStatus.css';
 
-// Hidden field that bots fill in and people never see (Netlify drops those submissions)
+// Hidden field that bots fill in and people never see (FormSubmit drops those submissions)
 export function Honeypot() {
   return (
     <p className="form-honeypot" aria-hidden="true">
       <label>
-        Leave this empty: <input name="bot-field" tabIndex={-1} autoComplete="off" />
+        Leave this empty: <input type="text" name="_honey" tabIndex={-1} autoComplete="off" />
       </label>
     </p>
   );

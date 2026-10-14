@@ -7,6 +7,8 @@ import officeRealistic from '../assets/work/sample-office-realistic.webp';
 import lRealistic from '../assets/work/sample-l-realistic.webp';
 import hospital from '../assets/work/sample-hospital.webp';
 import school from '../assets/work/sample-school.webp';
+import chiller from '../assets/work/sample-chiller.webp';
+import chillerCutaway from '../assets/work/sample-chiller-cutaway.webp';
 import './Work.css';
 
 // Sample renders that show the two styles we offer
@@ -24,13 +26,18 @@ const realisticStyle = [
   { image: school, title: 'School floor', detail: 'Classrooms, gym and rooftop units on a single graphic.', wide: true },
 ];
 
+const equipment = [
+  { image: chiller, title: 'Water-cooled chiller', detail: 'Detailed equipment model ready for live temperature and status points.', contain: true },
+  { image: chillerCutaway, title: 'Chiller cutaway, animated', detail: 'Animated cutaway showing water flow through the evaporator tubes.', contain: true },
+];
+
 function Gallery({ items }) {
   return (
     <div className="container work-grid">
       {items.map((project) => (
         <figure
           key={project.title}
-          className={`work-card work-card--fill${project.wide ? ' work-card--wide' : ''}`}
+          className={`work-card work-card--fill${project.wide ? ' work-card--wide' : ''}${project.contain ? ' work-card--contain' : ''}`}
         >
           <div className="work-card__media">
             <img src={project.image} alt={project.title} loading="lazy" />
@@ -76,6 +83,13 @@ function Work() {
           <h2 className="page-subtitle">Realistic style</h2>
         </div>
         <Gallery items={realisticStyle} />
+      </section>
+
+      <section className="page-section">
+        <div className="container work-heading">
+          <h2 className="page-subtitle">Equipment graphics</h2>
+        </div>
+        <Gallery items={equipment} />
       </section>
 
       <section className="page-section page-section--light">

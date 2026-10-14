@@ -106,3 +106,7 @@
   letter-spacing: 0.04em;
   text-transform: uppercase;
 }
+
+.work-card--contain .work-card__media img {
+  object-fit: contain;
+}

@@ -1,40 +1,27 @@
 import { Link } from 'react-router-dom';
-import officeVav from '../assets/work/office-vav.webp';
-import officeDuctwork from '../assets/work/office-ductwork.webp';
-import triangleFloor from '../assets/work/triangle-floor.webp';
-import triangleColor from '../assets/work/triangle-color.webp';
-import mechanicalOverlay from '../assets/work/mechanical-overlay.webp';
-import shellFloor from '../assets/work/shell-floor.webp';
-import ductZones from '../assets/work/duct-zones.webp';
-import zoneColors from '../assets/work/zone-colors.webp';
-import lShapedFloor from '../assets/work/l-shaped-floor.webp';
-import furnishedOffice from '../assets/work/furnished-office.webp';
-import parkingGarage from '../assets/work/parking-garage.webp';
-import centralPlant from '../assets/work/central-plant.webp';
-import boiler from '../assets/work/boiler.webp';
-import vavUnit from '../assets/work/vav-unit.webp';
+import officeLong from '../assets/work/sample-office-long.webp';
+import officeCore from '../assets/work/sample-office-core.webp';
+import uWings from '../assets/work/sample-u-wings.webp';
+import lOffice from '../assets/work/sample-l-office.webp';
+import officeRealistic from '../assets/work/sample-office-realistic.webp';
+import lRealistic from '../assets/work/sample-l-realistic.webp';
+import hospital from '../assets/work/sample-hospital.webp';
+import school from '../assets/work/sample-school.webp';
 import './Work.css';
 
-// Floor plan projects: image, short title, and what the graphic shows
-const floorPlans = [
-  { image: officeVav, title: 'Office floor with VAV boxes', detail: 'Full floor with supply ductwork and every VAV box marked for live points.', wide: true },
-  { image: ductZones, title: 'Supply and return ductwork', detail: 'Color-coded duct runs with terminal units over a finished office layout.' },
-  { image: triangleColor, title: 'Triangular floor plate', detail: 'Supply ducts and VAV boxes traced across a non-rectangular building.' },
-  { image: zoneColors, title: 'Color-coded air handler zones', detail: 'Each zone in its own color so operators see which unit serves which area.' },
-  { image: lShapedFloor, title: 'L-shaped tenant floor', detail: 'Main trunk line and VAV boxes highlighted along a long, narrow floor.' },
-  { image: parkingGarage, title: 'Parking garage level', detail: 'Full garage level with parking layout and devices placed for BAS points.', wide: true },
-  { image: officeDuctwork, title: 'Office floor, ductwork overlay', detail: 'Main trunk lines, branch ducts and terminal units over the room layout.' },
-  { image: furnishedOffice, title: 'Furnished open office', detail: 'Furniture, rooms and VAV locations so tenants recognize their space.' },
-  { image: mechanicalOverlay, title: 'Mechanical overlay', detail: 'Equipment and duct routing layered on a clean architectural base.' },
-  { image: triangleFloor, title: 'Irregular floor plate', detail: 'Non-rectangular building with zones and devices placed to scale.' },
-  { image: shellFloor, title: 'Architectural base floor', detail: 'Interior layout with mechanical runs in a muted base style.', wide: true },
+// Sample renders that show the two styles we offer
+const ductStyle = [
+  { image: officeLong, title: 'Office floor, full VAV distribution', detail: 'Main trunk, VAV boxes, branch ducts and flex runs to every diffuser.', wide: true },
+  { image: officeCore, title: 'Office floor with central core', detail: 'Two trunk lines feeding VAV zones on both sides of the core.' },
+  { image: uWings, title: 'U-shaped floor', detail: 'Wings served from one AHU, with each zone and its diffusers shown.' },
+  { image: lOffice, title: 'L-shaped floor', detail: 'Trunk following both wings, one VAV per zone.', wide: true },
 ];
 
-// Equipment graphics
-const equipment = [
-  { image: centralPlant, title: 'Central plant', detail: 'Cooling tower, chiller and pumps as a 3D system graphic.', wide: true },
-  { image: boiler, title: 'Fire-tube boiler cutaway', detail: 'Cutaway showing the burner and tubes, ready for live temperature points.' },
-  { image: vavUnit, title: 'Fan-powered VAV box', detail: 'Cutaway of the fan, damper and coil for a terminal unit page.' },
+const realisticStyle = [
+  { image: officeRealistic, title: 'Open office, realistic finish', detail: 'Supply in blue, return in orange, VAV boxes highlighted over a furnished floor.', wide: true },
+  { image: lRealistic, title: 'L-shaped office, realistic finish', detail: 'Furniture, glass rooms and the full air side in one view.' },
+  { image: hospital, title: 'Hospital floor', detail: 'Patient rooms, operating rooms and the ductwork that serves them.' },
+  { image: school, title: 'School floor', detail: 'Classrooms, gym and rooftop units on a single graphic.', wide: true },
 ];
 
 function Gallery({ items }) {
@@ -43,10 +30,11 @@ function Gallery({ items }) {
       {items.map((project) => (
         <figure
           key={project.title}
-          className={`work-card${project.wide ? ' work-card--wide' : ''}`}
+          className={`work-card work-card--fill${project.wide ? ' work-card--wide' : ''}`}
         >
           <div className="work-card__media">
             <img src={project.image} alt={project.title} loading="lazy" />
+            <span className="work-card__tag">Sample</span>
           </div>
           <figcaption className="work-card__caption">
             <h3 className="work-card__title">{project.title}</h3>
@@ -67,9 +55,10 @@ function Work() {
             <p className="eyebrow">Our work</p>
             <h1 className="page-title">3D floor plans for BAS graphics</h1>
             <p className="page-lead">
-              A selection of floor plans and equipment graphics we have built
-              for building automation front ends. Every image is delivered as
-              PNG or TIF at the size your graphics package needs.
+              Sample renders showing the two styles we build: a clean ductwork
+              view and a realistic furnished view. Every graphic is delivered as
+              PNG or TIF at the size your graphics package needs. Client project
+              examples are available on request.
             </p>
           </div>
         </div>
@@ -77,16 +66,16 @@ function Work() {
 
       <section className="page-section">
         <div className="container work-heading">
-          <h2 className="page-subtitle">Floor plans</h2>
+          <h2 className="page-subtitle">Ductwork style</h2>
         </div>
-        <Gallery items={floorPlans} />
+        <Gallery items={ductStyle} />
       </section>
 
       <section className="page-section">
         <div className="container work-heading">
-          <h2 className="page-subtitle">Equipment graphics</h2>
+          <h2 className="page-subtitle">Realistic style</h2>
         </div>
-        <Gallery items={equipment} />
+        <Gallery items={realisticStyle} />
       </section>
 
       <section className="page-section page-section--light">

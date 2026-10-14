@@ -623,3 +623,44 @@
     width: 100%;
   }
 }
+
+/* ---------- Live BAS view ---------- */
+.home-live {
+  padding-block: var(--section);
+}
+
+.home-live__head {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: 32px 64px;
+  align-items: end;
+  margin-bottom: 40px;
+}
+
+.home-live__text {
+  margin: 0;
+}
+
+.home-live__media {
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius);
+  background: var(--c-dark);
+}
+
+.home-live__media img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.home-live__link {
+  margin-top: 28px;
+}
+
+@media (max-width: 860px) {
+  .home-live__head {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

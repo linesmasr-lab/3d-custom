@@ -5,6 +5,7 @@ import offerFloorplan from '../assets/floorplans/floorplan-offer.webp';
 import floorplansImage from '../assets/home/service-floorplans.webp';
 import energyImage from '../assets/home/service-energy.webp';
 import productsImage from '../assets/home/service-products.webp';
+import basLiveImage from '../assets/work/sample-bas-live.webp';
 import brandImage from '../assets/images/unsplash-image-tHiDL7vAWFo.jpg';
 import { siteInfo } from '../siteInfo.js';
 import { useNetlifyForm } from '../hooks/useNetlifyForm.js';
@@ -102,6 +103,36 @@ function Home() {
             />
             <figcaption className="caption">Fig. 01 — 3D floorplan</figcaption>
           </figure>
+        </div>
+      </section>
+
+      {/* ---------- Live BAS view ---------- */}
+      <section className="home-live" aria-labelledby="home-live-title">
+        <div className="container">
+          <div className="home-live__head">
+            <div>
+              <p className="eyebrow">In your BAS</p>
+              <h2 id="home-live-title" className="home-h2">
+                What your 3D floor plan looks like live
+              </h2>
+            </div>
+            <p className="home-body home-live__text">
+              Every VAV tagged, zones colored by temperature, alarms and AHU data
+              around it. We deliver the 3D floor plan, your team adds the points.
+            </p>
+          </div>
+          <figure className="home-live__media">
+            <img
+              src={basLiveImage}
+              alt="3D office floor plan in a building automation front end with VAV tags, zone temperatures and alarms"
+              width="2000"
+              height="1116"
+              loading="lazy"
+            />
+          </figure>
+          <Link to="/work" className="btn btn--secondary home-live__link">
+            See more samples
+          </Link>
         </div>
       </section>
 

@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /order-received
+
+Sitemap: https://3d-custom.com/sitemap.xml

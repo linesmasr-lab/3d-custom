@@ -2,6 +2,7 @@ import { Navigate, Route, Routes } from 'react-router-dom'
 import Navbar from './components/Navbar/Navbar.jsx'
 import Footer from './components/Footer/Footer.jsx'
 import ScrollToTop from './components/ScrollToTop.jsx'
+import Seo from './components/Seo/Seo.jsx'
 import Home from './pages/Home.jsx'
 import Services from './pages/Services.jsx'
 import About from './pages/About.jsx'
@@ -28,6 +29,7 @@ function App() {
   return (
     <>
       <ScrollToTop />
+      <Seo />
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />

@@ -96,12 +96,12 @@ function Home() {
             <img
               className="floorplan-cutout"
               src={heroFloorplan}
-              alt="Isometric 3D floorplan of an office floor with ductwork and HVAC equipment"
+              alt="3D office floor plan with supply ductwork, VAV boxes and flex runs to every diffuser"
               width="1600"
-              height="803"
+              height="571"
               fetchPriority="high"
             />
-            <figcaption className="caption">Fig. 01 — 3D floorplan</figcaption>
+            <figcaption className="caption">Fig. 01 — Sample 3D floor plan</figcaption>
           </figure>
         </div>
       </section>

@@ -14,6 +14,11 @@ export const pages = {
     description:
       'Custom 3D floor plans with ductwork, VAV boxes and zones, plus AHU, chiller and boiler graphics for building automation systems. Built for controls contractors.',
   },
+  '/bas-graphics': {
+    title: '3D BAS Graphics Packages for EcoStruxure & Niagara | 3D-CUSTOM',
+    description:
+      'Complete 3D graphics packages for building automation front ends: home page, floor plans, central plant, AHU, alarms, trends and schedules. Native TGML and PX, bound to your points.',
+  },
   '/work': {
     title: 'Our Work: 3D Floor Plan & HVAC Graphic Samples | 3D-CUSTOM',
     description:

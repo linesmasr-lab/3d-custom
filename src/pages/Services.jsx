@@ -4,11 +4,25 @@ import floorplanImage from '../assets/home/service-floorplans.webp';
 import energyImage from '../assets/home/service-energy.webp';
 import productImage from '../assets/home/service-products.webp';
 import resultsImage from '../assets/pages/services-results.webp';
+import basImage from '../assets/bas/bas-plant.webp';
 import './Services.css';
 
 const offers = [
   {
     number: '01',
+    title: 'Complete BAS Graphics Packages',
+    to: '/bas-graphics',
+    image: basImage,
+    width: 1600,
+    height: 750,
+    fit: 'cover',
+    paragraphs: [
+      'The whole front end, designed and built for you: a 3D building home page, floor plans with live ductwork, central plant and air handler pages with animated fans, plus alarms, trends and schedules.',
+      'Delivered as native graphics for EcoStruxure Building Operation and Niagara, bound to your points and ready to import.',
+    ],
+  },
+  {
+    number: '02',
     title: '3D Floorplans',
     to: '/3d-floorplans',
     image: floorplanImage,
@@ -20,7 +34,7 @@ const offers = [
     ],
   },
   {
-    number: '02',
+    number: '03',
     title: 'Energy Management Solutions',
     to: '/energy-management-solutions',
     image: energyImage,
@@ -32,7 +46,7 @@ const offers = [
     ],
   },
   {
-    number: '03',
+    number: '04',
     title: 'Product Models and Animations',
     to: '/product-models-and-animations',
     image: productImage,
@@ -83,7 +97,7 @@ function Services() {
       <section className="page-section" aria-labelledby="services-offer-title">
         <div className="container">
           <div className="section-head">
-            <p className="eyebrow">Three services</p>
+            <p className="eyebrow">Four services</p>
             <h2 id="services-offer-title" className="section-title">
               What we offer
             </h2>

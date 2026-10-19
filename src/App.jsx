@@ -10,6 +10,7 @@ import Contact from './pages/Contact.jsx'
 import Faqs from './pages/Faqs.jsx'
 import Shop from './pages/Shop.jsx'
 import Work from './pages/Work.jsx'
+import BasGraphics from './pages/BasGraphics.jsx'
 import ContactForOffer from './pages/ContactForOffer.jsx'
 import OrderReceived from './pages/OrderReceived.jsx'
 import NotFound from './pages/NotFound.jsx'
@@ -35,6 +36,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/services" element={<Services />} />
         <Route path="/work" element={<Work />} />
+        <Route path="/bas-graphics" element={<BasGraphics />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/faqs" element={<Faqs />} />

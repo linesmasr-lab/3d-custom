@@ -8,6 +8,7 @@ import productsImage from '../assets/home/service-products.webp';
 import basLiveImage from '../assets/work/sample-bas-live.webp';
 import brandImage from '../assets/images/unsplash-image-tHiDL7vAWFo.jpg';
 import { siteInfo } from '../siteInfo.js';
+import DemoVideo from '../components/DemoVideo/DemoVideo.jsx';
 import { useNetlifyForm } from '../hooks/useNetlifyForm.js';
 import { FormError, FormSuccess, Honeypot } from '../components/FormStatus/FormStatus.jsx';
 import './Home.css';
@@ -103,6 +104,34 @@ function Home() {
             />
             <figcaption className="caption">Fig. 01 — Sample 3D floor plan</figcaption>
           </figure>
+        </div>
+      </section>
+
+      {/* ---------- BAS graphics package demo ---------- */}
+      <section className="home-demo" aria-labelledby="home-demo-title">
+        <div className="container">
+          <div className="home-demo__head">
+            <div>
+              <p className="eyebrow eyebrow--on-dark">New: complete BAS graphics packages</p>
+              <h2 id="home-demo-title" className="home-h2 home-h2--on-dark">
+                Your building, live in 3D
+              </h2>
+            </div>
+            <p className="home-body home-demo__text">
+              A full front end running in EcoStruxure Building Operation: 3D
+              home page, floor plans with live ductwork, central plant and air
+              handlers with animated fans, alarms, trends and schedules.
+            </p>
+          </div>
+          <DemoVideo />
+          <div className="home-demo__actions">
+            <Link to="/bas-graphics" className="btn btn--primary">
+              See the BAS graphics service
+            </Link>
+            <Link to="/contact-for-offer" className="btn btn--ghost-dark">
+              Get a quote
+            </Link>
+          </div>
         </div>
       </section>
 

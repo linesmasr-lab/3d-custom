@@ -10,6 +10,7 @@ import school from '../assets/work/sample-school.webp';
 import chillerCutaway from '../assets/work/sample-chiller-cutaway.webp';
 import boilerCutaway from '../assets/work/sample-boiler-cutaway.webp';
 import basLive from '../assets/work/sample-bas-live.webp';
+import DemoVideo from '../components/DemoVideo/DemoVideo.jsx';
 import './Work.css';
 
 // Sample renders that show the two styles we offer
@@ -61,7 +62,7 @@ function Work() {
         <div className="container page-hero__grid page-hero__grid--single">
           <div className="page-hero__copy">
             <p className="eyebrow">Our work</p>
-            <h1 className="page-title">3D floor plans for BAS graphics</h1>
+            <h1 className="page-title">3D floor plans and BAS graphics</h1>
             <p className="page-lead">
               Sample renders showing the two styles we build: a clean ductwork
               view and a realistic furnished view. Every graphic is delivered as
@@ -69,6 +70,20 @@ function Work() {
               examples are available on request.
             </p>
           </div>
+        </div>
+      </section>
+
+      <section className="page-section">
+        <div className="container work-heading">
+          <h2 className="page-subtitle">Full graphics package, running live in EcoStruxure</h2>
+        </div>
+        <div className="container">
+          <DemoVideo caption="Home page, floor plans, central plant, air handlers, roof, garage, alarms, trends and schedules, all bound to live points." />
+          <p className="work-video__link">
+            <Link to="/bas-graphics" className="btn btn--secondary">
+              About BAS graphics packages
+            </Link>
+          </p>
         </div>
       </section>
 

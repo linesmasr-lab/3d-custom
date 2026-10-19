@@ -110,3 +110,7 @@
 .work-card--contain .work-card__media img {
   object-fit: contain;
 }
+
+.work-video__link {
+  margin: 28px 0 0;
+}

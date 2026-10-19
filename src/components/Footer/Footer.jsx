@@ -73,7 +73,7 @@ function Footer() {
         <div className="footer__bottom">
           <span>© {year} 3D-CUSTOM</span>
           <span className="footer__keywords">
-            3D floorplans · Energy management · Product models
+            BAS graphics · 3D floorplans · Energy management · Product models
           </span>
         </div>
       </div>

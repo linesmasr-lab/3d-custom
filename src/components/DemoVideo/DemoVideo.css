@@ -1,0 +1,23 @@
+.demo-video {
+  margin: 0;
+}
+
+.demo-video__frame {
+  overflow: hidden;
+  border: 1px solid var(--c-border-dark);
+  border-radius: var(--radius);
+  background: #05080d;
+  box-shadow: 0 24px 60px -24px rgba(5, 8, 13, 0.55);
+}
+
+.demo-video__frame video {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  background: #05080d;
+}
+
+.demo-video__caption {
+  margin-top: 14px;
+}

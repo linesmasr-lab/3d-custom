@@ -664,3 +664,37 @@
     grid-template-columns: minmax(0, 1fr);
   }
 }
+
+/* ==========================================================
+   BAS graphics package demo (video)
+   ========================================================== */
+.home-demo {
+  padding-block: var(--section);
+  background: #0b0f16;
+}
+
+.home-demo__head {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: 32px 64px;
+  align-items: end;
+  margin-bottom: 40px;
+}
+
+.home-demo__text {
+  margin: 0;
+  color: var(--c-text-on-dark);
+}
+
+.home-demo__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+@media (max-width: 860px) {
+  .home-demo__head {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

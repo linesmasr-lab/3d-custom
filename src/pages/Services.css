@@ -143,3 +143,8 @@
     width: 100%;
   }
 }
+
+/* BAS graphics package: full-bleed screenshot, no inner padding */
+.services-item:first-child .services-item__media img {
+  padding: 0;
+}

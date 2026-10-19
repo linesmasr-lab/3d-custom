@@ -11,6 +11,7 @@ export const siteInfo = {
 export const navLinks = [
   { to: '/', label: 'Home', end: true },
   { to: '/services', label: 'Services' },
+  { to: '/bas-graphics', label: 'BAS Graphics' },
   { to: '/work', label: 'Work' },
   { to: '/about', label: 'About' },
   { to: '/contact', label: 'Contact' },

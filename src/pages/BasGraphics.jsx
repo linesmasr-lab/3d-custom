@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import DemoVideo from '../components/DemoVideo/DemoVideo.jsx';
+import DemoVideo, { LIGHT_VIDEO, LIGHT_POSTER } from '../components/DemoVideo/DemoVideo.jsx';
 import building from '../assets/bas/bas-building.webp';
 import level1 from '../assets/bas/bas-level1.webp';
 import level2 from '../assets/bas/bas-level2.webp';
@@ -108,6 +108,16 @@ function BasGraphics() {
             </h2>
           </div>
           <DemoVideo caption="Screen recording of our demo package running in EBO. Values, fans and status lights are driven by live points." />
+          <div className="bas-demo__head bas-demo__head--light">
+            <p className="eyebrow eyebrow--on-dark">New · light theme</p>
+            <h3 className="section-title">The same package in a clean light theme</h3>
+          </div>
+          <DemoVideo
+            src={LIGHT_VIDEO}
+            poster={LIGHT_POSTER}
+            label="Light theme 3D BAS graphics running in EcoStruxure Building Operation"
+            caption="Captured in EBO WebStation: chillers room, boilers room, air handler, floor plans, garage, roof and schedules. Equipment animates only while it runs."
+          />
         </div>
       </section>
 

@@ -6,8 +6,16 @@ import './DemoVideo.css';
 // Visitors can still use the controls (pause, full screen).
 export const DEMO_VIDEO = '/media/ebo-demo.mp4';
 export const DEMO_POSTER = '/media/ebo-demo-poster.webp';
+export const LIGHT_VIDEO = '/media/ebo-light-demo.mp4';
+export const LIGHT_POSTER = '/media/ebo-light-demo-poster.webp';
 
-function DemoVideo({ caption, className = '' }) {
+function DemoVideo({
+  caption,
+  className = '',
+  src = DEMO_VIDEO,
+  poster = DEMO_POSTER,
+  label = 'Screen recording of a 3D BAS graphics package running in EcoStruxure Building Operation',
+}) {
   const ref = useRef(null);
 
   useEffect(() => {
@@ -35,8 +43,8 @@ function DemoVideo({ caption, className = '' }) {
       <div className="demo-video__frame">
         <video
           ref={ref}
-          src={DEMO_VIDEO}
-          poster={DEMO_POSTER}
+          src={src}
+          poster={poster}
           width="1280"
           height="720"
           muted
@@ -44,7 +52,7 @@ function DemoVideo({ caption, className = '' }) {
           playsInline
           controls
           preload="none"
-          aria-label="Screen recording of a 3D BAS graphics package running in EcoStruxure Building Operation"
+          aria-label={label}
         />
       </div>
       {caption ? <figcaption className="caption demo-video__caption">{caption}</figcaption> : null}

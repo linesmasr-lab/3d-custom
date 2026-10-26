@@ -5,7 +5,7 @@ import offerFloorplan from '../assets/floorplans/floorplan-offer.webp';
 import floorplansImage from '../assets/home/service-floorplans.webp';
 import energyImage from '../assets/home/service-energy.webp';
 import productsImage from '../assets/home/service-products.webp';
-import basLiveImage from '../assets/work/sample-bas-live.webp';
+import basLiveImage from '../assets/work/ebo-light-level1.webp';
 import brandImage from '../assets/images/unsplash-image-tHiDL7vAWFo.jpg';
 import { siteInfo } from '../siteInfo.js';
 import DemoVideo from '../components/DemoVideo/DemoVideo.jsx';
@@ -153,9 +153,9 @@ function Home() {
           <figure className="home-live__media">
             <img
               src={basLiveImage}
-              alt="3D office floor plan in a building automation front end with VAV tags, zone temperatures and alarms"
-              width="2000"
-              height="1116"
+              alt="Level 1 3D floor plan running in EcoStruxure Building Operation, with VAV zone temperatures and AHU data"
+              width="1471"
+              height="752"
               loading="lazy"
             />
           </figure>

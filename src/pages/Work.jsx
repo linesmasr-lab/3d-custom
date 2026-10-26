@@ -9,7 +9,8 @@ import hospital from '../assets/work/sample-hospital.webp';
 import school from '../assets/work/sample-school.webp';
 import chillerCutaway from '../assets/work/sample-chiller-cutaway.webp';
 import boilerCutaway from '../assets/work/sample-boiler-cutaway.webp';
-import basLive from '../assets/work/sample-bas-live.webp';
+import basLive from '../assets/work/ebo-light-level1.webp';
+import basChillers from '../assets/work/ebo-light-chillers.webp';
 import DemoVideo from '../components/DemoVideo/DemoVideo.jsx';
 import './Work.css';
 
@@ -96,7 +97,13 @@ function Work() {
             {
               image: basLive,
               title: 'Live floor graphic with zone temperatures',
-              detail: 'The 3D floor plan as the operator sees it: every VAV tagged, zones colored by temperature, alarms and AHU data around it.',
+              detail: 'Captured in EcoStruxure Building Operation: every VAV tagged, zones colored by temperature, AHU data beside the plan.',
+              wide: true,
+            },
+            {
+              image: basChillers,
+              title: 'Chillers room, light theme',
+              detail: 'Towers, pumps and chillers piped to their real nozzles, with a status button beside every unit.',
               wide: true,
             },
           ]}

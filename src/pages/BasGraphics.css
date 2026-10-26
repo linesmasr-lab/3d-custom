@@ -22,6 +22,10 @@
   margin-bottom: 36px;
 }
 
+.bas-demo__head--light {
+  margin-top: calc(var(--section) * 0.6);
+}
+
 .page .bas-demo .section-title {
   color: var(--c-white);
 }

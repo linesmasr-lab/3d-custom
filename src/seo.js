@@ -42,7 +42,7 @@ export const pages = {
   '/shop': {
     title: 'Order 3D Floor Plans & Equipment Graphics Online | 3D-CUSTOM',
     description:
-      'Order a 3D floor plan from $195 per floor or an equipment graphic for $60. Pay online and upload your drawings.',
+      'Order a 3D floor plan from $195 per floor or an equipment graphic for $60, or download our HVAC graphics library: an EBO graphics library of TGML components and HVAC animated graphics for any BAS graphics library. Pay online and upload your drawings.',
   },
   '/contact-for-offer': {
     title: 'Get Your First 3D Floor Plan Free | 3D-CUSTOM',

@@ -147,3 +147,45 @@
   margin: 32px 0 0;
   color: var(--c-text-2);
 }
+
+.shop-product__regular {
+  margin-right: 8px;
+  color: var(--c-text-2);
+  opacity: 0.7;
+}
+
+.shop-product__badge {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: var(--c-light);
+  border: 1px solid var(--c-border);
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--c-blue);
+  vertical-align: 1px;
+}
+
+.shop__video {
+  display: flex;
+  justify-content: center;
+  margin: 0 0 40px;
+}
+
+.shop__video video {
+  display: block;
+  width: 100%;
+  max-width: 360px;
+  height: auto;
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius);
+  background: var(--c-light);
+}
+
+.shop__fineprint {
+  margin: 24px 0 0;
+  font-size: 14px;
+  color: var(--c-text-2);
+}

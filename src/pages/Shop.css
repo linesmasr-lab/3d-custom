@@ -177,7 +177,7 @@
 .shop__video video {
   display: block;
   width: 100%;
-  max-width: 360px;
+  max-width: 1100px;
   height: auto;
   border: 1px solid var(--c-border);
   border-radius: var(--radius);

@@ -8,16 +8,20 @@ import hvacEquipmentImage from '../assets/pages/shop-hvac-equipment.webp';
 import hvacEquipmentHoverImage from '../assets/pages/shop-hvac-equipment-hover.webp';
 import hvacPipesImage from '../assets/pages/shop-hvac-pipes.webp';
 import hvacAhuDuctImage from '../assets/pages/shop-hvac-ahu-duct.webp';
-import hvacValvesSensorsImage from '../assets/pages/shop-hvac-valves-sensors.webp';
+import hvacPipeAccessoriesImage from '../assets/pages/shop-hvac-pipe-accessories.webp';
+import eboThemeDarkImage from '../assets/pages/shop-ebo-theme-dark.webp';
+import eboThemeLightImage from '../assets/pages/shop-ebo-theme-light.webp';
 import './Shop.css';
 
 const categories = [
   { slug: '3d-floorplan', label: '3D Floorplans' },
   { slug: 'equipment', label: 'Equipment Graphics' },
   { slug: 'hvac-library', label: 'HVAC Graphics Library' },
+  { slug: 'ebo-themes', label: 'EBO Site Themes' },
 ];
 
 const HVAC = 'hvac-library';
+const THEMES = 'ebo-themes';
 
 // Each product opens its Stripe payment link. After paying, Stripe sends the
 // customer to /order-received, where they upload their drawings.
@@ -51,12 +55,12 @@ const products = [
   // Images are 1600 x 1200 (4:3) with a transparent background.
   {
     title: 'HVAC Graphics Library – Complete Bundle',
-    price: '$449 one-time',
-    regularPrice: '$599',
-    badge: 'Launch price',
+    price: '$149 one-time',
+    regularPrice: '$217',
+    badge: 'Save 30%',
     detail:
-      'Everything below: 27 animated equipment, 378 pipe pieces, 48 AHU & duct and 52 valves & sensors – 505 EBO components + 690 PNG/GIF files.',
-    href: 'https://buy.stripe.com/4gM14ofspbP2dKI0XEg7e07',
+      'Everything below: 24 animated equipment, 378 pipes + 15 pipe accessories, and 63 AHU, duct & sensor components – 480 EBO components + 660 PNG/GIF files.',
+    href: 'https://buy.stripe.com/9B6dRadkhdXafSQcGmg7e0b',
     category: HVAC,
     image: hvacBundleImage,
     width: 1600,
@@ -64,10 +68,10 @@ const products = [
   },
   {
     title: 'Animated Equipment Pack',
-    price: '$249 one-time',
+    price: '$99 one-time',
     detail:
-      '27 chillers, pumps, boilers, towers, fans, AHU, heat exchangers and tanks. OFF image + animated ON cutaway, one bind per part. EBO .tgmlcomponent + PNG + GIF.',
-    href: 'https://buy.stripe.com/bJe28scgdaKYbCAayeg7e03',
+      '24 chillers, pumps, boilers, towers, fans, AHU, heat exchangers and tanks. OFF image + animated ON cutaway, one bind per part. EBO .tgmlcomponent + PNG + GIF.',
+    href: 'https://buy.stripe.com/6oUfZi4NLf1e7mk9uag7e08',
     category: HVAC,
     image: hvacEquipmentImage,
     hoverImage: hvacEquipmentHoverImage,
@@ -75,35 +79,61 @@ const products = [
     height: 1200,
   },
   {
-    title: 'Pipe Pack',
-    price: '$99 one-time',
+    title: 'Pipe Pack (pipes + accessories)',
+    price: '$49 one-time',
     detail:
-      '378 isometric pipe fittings in 9 system colors, same scale as the equipment. EBO .tgmlcomponent + PNG.',
-    href: 'https://buy.stripe.com/6oUaEY3JHaKY9us21Ig7e04',
+      '378 isometric pipe fittings in 9 system colors + 15 accessories (2-way / 3-way control valves, ball valves, strap-on sensors, rotary actuators) in X / Y / Z. Same scale as the equipment – flanges fit the pipes. EBO .tgmlcomponent + PNG.',
+    href: 'https://buy.stripe.com/00w7sM1Bz8CQbCA7m2g7e09',
     category: HVAC,
     image: hvacPipesImage,
+    hoverImage: hvacPipeAccessoriesImage,
     width: 1600,
     height: 1200,
   },
   {
-    title: 'AHU & Duct Pack',
-    price: '$149 one-time',
+    title: 'AHU, Duct & Sensors Pack',
+    price: '$69 one-time',
     detail:
-      '48 components: fans, dampers, filters, heating/cooling coils, electric heaters, DX coils, heat recovery and duct fittings, with live Value / Position / Mode / Alarm states. EBO + PNG + GIF.',
-    href: 'https://buy.stripe.com/bJe14obc97yM7mk0XEg7e05',
+      '63 components on one duct cross-section: fans, dampers, filters, heating/cooling coils, electric heaters, DX coil, heat recovery, duct fittings, coil valves and duct sensors, with live Value / Position / Mode / Alarm states. EBO + PNG + GIF.',
+    href: 'https://buy.stripe.com/aFa8wQ2FDdXa7mkcGmg7e0a',
     category: HVAC,
     image: hvacAhuDuctImage,
     width: 1600,
     height: 1200,
   },
+  // Complete EBO sites (header, navigation, pages and demo points).
   {
-    title: 'Valves & Sensors Pack',
-    price: '$79 one-time',
+    title: 'EBO Site Theme – Dark & Light (both)',
+    price: '$149 one-time',
+    regularPrice: '$198',
     detail:
-      '52 control valves, actuators, manual valves and immersion, probe, strap-on and differential-pressure sensors. EBO + PNG.',
-    href: 'https://buy.stripe.com/9B6eVe1BzcT67mkcGmg7e06',
-    category: HVAC,
-    image: hvacValvesSensorsImage,
+      'Both complete EcoStruxure Building Operation sites: 11 + 13 pages, header, navigation menu, alarms, trends, schedules and demo points. Import the .xml and it runs. Requires EBO 6.0+.',
+    href: 'https://buy.stripe.com/aFa3cw0xv06kgWU21Ig7e0e',
+    category: THEMES,
+    image: eboThemeDarkImage,
+    hoverImage: eboThemeLightImage,
+    width: 1600,
+    height: 1200,
+  },
+  {
+    title: 'EBO Site Theme – Dark',
+    price: '$99 one-time',
+    detail:
+      'Complete dark EBO site – Home, Central Plant, AHU-1/2, Level 1/2, Garage, Roof, Alarms, Trends, Schedules – with header, navigation and ~450 demo points. Requires EBO 6.0+.',
+    href: 'https://buy.stripe.com/5kQbJ21Bz4mAaywayeg7e0c',
+    category: THEMES,
+    image: eboThemeDarkImage,
+    width: 1600,
+    height: 1200,
+  },
+  {
+    title: 'EBO Site Theme – Light',
+    price: '$99 one-time',
+    detail:
+      'Complete light EBO site – adds Chillers Room and Boilers Room (13 pages) – with header, navigation and ~450 demo points. Requires EBO 6.0+.',
+    href: 'https://buy.stripe.com/28E14ofsp8CQcGE21Ig7e0d',
+    category: THEMES,
+    image: eboThemeLightImage,
     width: 1600,
     height: 1200,
   },
@@ -155,8 +185,8 @@ function Shop() {
               <video
                 src="/media/hvac-library-demo.mp4"
                 poster="/media/hvac-library-demo-poster.webp"
-                width="720"
-                height="1280"
+                width="1280"
+                height="720"
                 muted
                 loop
                 playsInline
@@ -216,6 +246,13 @@ function Shop() {
               Instant download after payment. One-time purchase, unlimited projects inside your
               company. Works natively in EcoStruxure Building Operation (EBO); PNG/GIF files work
               in any BMS software.
+            </p>
+          )}
+
+          {activeCategory === THEMES && (
+            <p className="shop__note">
+              Want this theme with YOUR building&rsquo;s 3D floor plans and plant? We build it –{' '}
+              <Link to="/contact-for-offer">Contact for Offer</Link>
             </p>
           )}
 

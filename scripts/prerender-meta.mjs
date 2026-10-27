@@ -1,4 +1,4 @@
-// After `vite build`, writes dist/<page>/index.html for every page with that
+// After `vite build`, writes dist/<page>.html for every page with that
 // page's own title, description and canonical URL, so search engines and link
 // previews see the right text without running JavaScript.
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
@@ -20,8 +20,11 @@ for (const [path, page] of Object.entries(pages)) {
   if (path === '/') {
     writeFileSync('dist/index.html', html);
   } else {
-    mkdirSync(`dist${path}`, { recursive: true });
-    writeFileSync(`dist${path}/index.html`, html);
+    // dist/shop.html is served at /shop with no redirect (Cloudflare Pages),
+    // so the URL Google crawls is the same as the canonical URL.
+    const file = `dist${path}.html`;
+    mkdirSync(file.slice(0, file.lastIndexOf('/')), { recursive: true });
+    writeFileSync(file, html);
   }
 }
 

@@ -11,6 +11,7 @@ import Faqs from './pages/Faqs.jsx'
 import Shop from './pages/Shop.jsx'
 import Work from './pages/Work.jsx'
 import BasGraphics from './pages/BasGraphics.jsx'
+import EboLibrary from './pages/EboLibrary.jsx'
 import ContactForOffer from './pages/ContactForOffer.jsx'
 import OrderReceived from './pages/OrderReceived.jsx'
 import NotFound from './pages/NotFound.jsx'
@@ -41,6 +42,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/faqs" element={<Faqs />} />
         <Route path="/shop" element={<Shop />} />
+        <Route path="/ebo-graphics-library" element={<EboLibrary />} />
         <Route path="/contact-for-offer" element={<ContactForOffer />} />
         <Route path="/order-received" element={<OrderReceived />} />
         {temporaryRedirects.map(({ from, to }) => (

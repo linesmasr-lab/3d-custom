@@ -1,0 +1,48 @@
+/* ---------- /ebo-graphics-library landing page ---------- */
+.ebo-lib__lead {
+  max-width: 720px;
+}
+
+.ebo-lib__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.page-section.ebo-lib__video {
+  padding-bottom: 0;
+}
+
+.ebo-lib__themes-head {
+  margin-top: 72px;
+}
+
+.ebo-lib__faq-list {
+  display: grid;
+  gap: 0;
+  max-width: 860px;
+  margin: 0;
+}
+
+.ebo-lib__faq-item {
+  padding: 22px 0;
+  border-top: 1px solid var(--c-border);
+}
+
+.ebo-lib__faq-item:last-child {
+  border-bottom: 1px solid var(--c-border);
+}
+
+.ebo-lib__question {
+  margin: 0 0 8px;
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--c-dark);
+}
+
+.ebo-lib__answer {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--c-text-2);
+}

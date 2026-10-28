@@ -8,6 +8,7 @@ const pageLinks = [
   { to: '/services', label: 'Services' },
   { to: '/about', label: 'About' },
   { to: '/shop', label: 'Shop' },
+  { to: '/ebo-graphics-library', label: 'EBO Graphics Library' },
 ]
 
 const supportLinks = [

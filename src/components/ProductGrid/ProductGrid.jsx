@@ -11,6 +11,7 @@ function ProductGrid({ products }) {
           key={product.href}
         >
           <div className="shop-product__media">
+            {product.mediaTag && <span className="shop-product__tag">{product.mediaTag}</span>}
             <img
               className="shop-product__image"
               src={product.image}

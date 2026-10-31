@@ -3,7 +3,7 @@ import floorplanImage from '../assets/pages/shop-floorplan.webp';
 import floorplanHoverImage from '../assets/pages/shop-floorplan-hover.webp';
 import largeFloorImage from '../assets/work/office-vav.webp';
 import equipmentImage from '../assets/work/boiler.webp';
-import { HVAC, THEMES } from '../data/libraryCatalog.js';
+import { HVAC, THEMES, NIAGARA } from '../data/libraryCatalog.js';
 import { libraryProducts } from '../data/libraryProducts.js';
 import ProductGrid from '../components/ProductGrid/ProductGrid.jsx';
 import { WhyStrip, FlatVsOurs } from '../components/LibraryPitch/LibraryPitch.jsx';
@@ -13,6 +13,7 @@ const categories = [
   { slug: '3d-floorplan', label: '3D Floorplans' },
   { slug: 'equipment', label: 'Equipment Graphics' },
   { slug: 'hvac-library', label: 'HVAC Graphics Library' },
+  { slug: 'hvac-niagara', label: 'HVAC Library – Niagara 4' },
   { slug: 'ebo-themes', label: 'EBO Site Themes' },
 ];
 
@@ -108,6 +109,23 @@ function Shop() {
             </figure>
           )}
 
+          {activeCategory === NIAGARA && (
+            <figure className="shop__video">
+              <video
+                src="/media/3d-custom_Niagara_Edition_Demo_16x9.mp4"
+                poster="/media/3d-custom_Niagara_Edition_Demo_16x9-poster.webp"
+                width="1280"
+                height="720"
+                muted
+                loop
+                playsInline
+                controls
+                preload="metadata"
+                aria-label="Demo of the 3D-CUSTOM HVAC graphics library, Niagara 4 Edition: Px components in Workbench and the web browser"
+              />
+            </figure>
+          )}
+
           {showPitch && <WhyStrip />}
 
           <ProductGrid products={visibleProducts} />
@@ -119,6 +137,25 @@ function Shop() {
               in any BMS software.{' '}
               <Link to="/ebo-graphics-library">More about the EBO graphics library</Link>
             </p>
+          )}
+
+          {activeCategory === HVAC && (
+            <p className="shop__crosslink">
+              Using Niagara 4? → <Link to="/shop?category=hvac-niagara">Niagara Edition</Link>
+            </p>
+          )}
+
+          {activeCategory === NIAGARA && (
+            <>
+              <p className="shop__fineprint">
+                Instant download after payment. Works in any Niagara 4 station (tested on 4.12,
+                Workbench + HTML5 web view). Copy the folder into Files, click a component, drag your
+                point onto it. One-time purchase, unlimited projects inside your company.
+              </p>
+              <p className="shop__crosslink">
+                Using EcoStruxure EBO? → <Link to="/shop?category=hvac-library">EBO Edition</Link>
+              </p>
+            </>
           )}
 
           {showPitch && <FlatVsOurs />}

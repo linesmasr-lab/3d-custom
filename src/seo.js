@@ -1,7 +1,7 @@
 // Page titles and descriptions for search engines.
 // Used in the browser (src/components/Seo.jsx) and at build time
 // (scripts/prerender-meta.mjs writes a copy of index.html per page).
-import { libraryCatalog } from './data/libraryCatalog.js';
+import { libraryCatalog, NIAGARA } from './data/libraryCatalog.js';
 import { eboLibraryFaqs } from './data/eboLibraryFaqs.js';
 
 export const SITE_URL = 'https://3d-custom.com';
@@ -9,9 +9,9 @@ export const SITE_URL = 'https://3d-custom.com';
 // Product + Offer structured data for the library packs and site themes, so
 // Google can show the prices. `image` is the source file name; the build
 // script swaps it for the hashed file in dist/assets.
-const productSchema = (pagePath) => ({
+const productSchema = (pagePath, items = libraryCatalog) => ({
   '@context': 'https://schema.org',
-  '@graph': libraryCatalog.map((item) => ({
+  '@graph': items.map((item) => ({
     '@type': 'Product',
     '@id': `${SITE_URL}${pagePath}#${item.id}`,
     name: item.title,
@@ -79,14 +79,17 @@ export const pages = {
   '/shop': {
     title: 'Order 3D Floor Plans & Equipment Graphics Online | 3D-CUSTOM',
     description:
-      'Order a 3D floor plan from $195 per floor or an equipment graphic for $60, or download our HVAC graphics library: an EBO graphics library of TGML components and HVAC animated graphics for any BAS graphics library. Pay online and upload your drawings.',
+      'Order a 3D floor plan from $195 per floor or an equipment graphic for $60, or download our HVAC graphics library: an EBO graphics library of TGML components and HVAC animated graphics for any BAS graphics library, now also a Niagara 4 graphics library with Niagara Px graphics (N4 HVAC graphics, Tridium graphics). Pay online and upload your drawings.',
     jsonLd: [productSchema('/shop')],
   },
   '/ebo-graphics-library': {
     title: 'EcoStruxure Graphics Library: 3D EBO Graphics & Site Templates | 3D-CUSTOM',
     description:
       '3D EBO graphics library: animated TGML components, pipes and valves that fit 1:1, and complete EcoStruxure site templates. Prices from $49, instant download.',
-    jsonLd: [productSchema('/ebo-graphics-library'), faqSchema],
+    jsonLd: [
+      productSchema('/ebo-graphics-library', libraryCatalog.filter((item) => item.category !== NIAGARA)),
+      faqSchema,
+    ],
   },
   '/contact-for-offer': {
     title: 'Get Your First 3D Floor Plan Free | 3D-CUSTOM',

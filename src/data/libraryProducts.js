@@ -7,7 +7,9 @@ import hvacPipeAccessoriesImage from '../assets/pages/shop-hvac-pipe-accessories
 import hvacAhuDuctImage from '../assets/pages/shop-hvac-ahu-duct.webp';
 import eboThemeDarkImage from '../assets/pages/shop-ebo-theme-dark.webp';
 import eboThemeLightImage from '../assets/pages/shop-ebo-theme-light.webp';
-import { libraryCatalog, formatPrice } from './libraryCatalog.js';
+import niagaraImage from '../assets/pages/shop-hvac-niagara.webp';
+import niagaraHoverImage from '../assets/pages/shop-hvac-niagara-hover.webp';
+import { libraryCatalog, formatPrice, NIAGARA } from './libraryCatalog.js';
 
 // Card images are 1600 x 1200 (4:3) with a transparent background
 const images = {
@@ -18,6 +20,10 @@ const images = {
   'ebo-themes-both': { image: eboThemeDarkImage, hoverImage: eboThemeLightImage },
   'ebo-theme-dark': { image: eboThemeDarkImage },
   'ebo-theme-light': { image: eboThemeLightImage },
+  'niagara-bundle': { image: niagaraImage, hoverImage: niagaraHoverImage },
+  'niagara-equipment': { image: hvacEquipmentImage, hoverImage: hvacEquipmentHoverImage },
+  'niagara-pipes': { image: hvacPipesImage, hoverImage: hvacPipeAccessoriesImage },
+  'niagara-ahu-duct': { image: hvacAhuDuctImage },
 };
 
 export const libraryProducts = libraryCatalog.map((item) => ({
@@ -25,6 +31,8 @@ export const libraryProducts = libraryCatalog.map((item) => ({
   ...images[item.id],
   price: formatPrice(item.price),
   regularPrice: item.regularPrice ? `$${item.regularPrice}` : undefined,
+  // Niagara cards get a "NIAGARA 4" pill so they aren't confused with EBO cards
+  mediaTag: item.category === NIAGARA ? 'NIAGARA 4' : undefined,
   width: 1600,
   height: 1200,
 }));

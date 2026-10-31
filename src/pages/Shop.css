@@ -189,3 +189,26 @@
   font-size: 14px;
   color: var(--c-text-2);
 }
+
+/* "NIAGARA 4" pill on the Niagara Edition cards */
+.shop-product__tag {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  z-index: 1;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: #1f3b57;
+  color: var(--c-white);
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  line-height: 1.3;
+}
+
+.shop__crosslink {
+  margin: 8px 0 0;
+  font-size: 14px;
+  color: var(--c-text-2);
+}

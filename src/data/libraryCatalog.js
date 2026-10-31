@@ -6,6 +6,7 @@
 
 export const HVAC = 'hvac-library';
 export const THEMES = 'ebo-themes';
+export const NIAGARA = 'hvac-niagara';
 
 export const libraryCatalog = [
   {
@@ -80,6 +81,49 @@ export const libraryCatalog = [
       'Complete light EBO site – adds Chillers Room and Boilers Room (13 pages) – with header, navigation and ~450 demo points. Requires EBO 6.0+.',
     href: 'https://buy.stripe.com/28E14ofsp8CQcGE21Ig7e0d',
     image: 'shop-ebo-theme-light.webp',
+  },
+  // HVAC graphics library – Niagara 4 Edition (Px)
+  {
+    id: 'niagara-bundle',
+    category: NIAGARA,
+    title: 'HVAC Graphics Library – Niagara 4 Complete Bundle',
+    price: 149,
+    regularPrice: 217,
+    badge: 'Save 30%',
+    detail:
+      'Everything below for Niagara 4: 24 animated equipment, 378 pipes + 15 accessories, 63 AHU, duct & sensor components. Px-ready, full size + compact 60 %, library pages and a live demo page. Tested in Workbench and the web browser.',
+    href: 'https://buy.stripe.com/4gM9AU2FD2es4a821Ig7e0f',
+    image: 'shop-hvac-niagara.webp',
+  },
+  {
+    id: 'niagara-equipment',
+    category: NIAGARA,
+    title: 'Animated Equipment Pack – Niagara 4',
+    price: 99,
+    detail:
+      '24 chillers, pumps, boilers, towers, fans, AHU, heat exchangers and tanks. OFF image + animated ON cutaway – bind one Boolean point. Full size + compact.',
+    href: 'https://buy.stripe.com/dRm14o6VTcT6220fSyg7e0g',
+    image: 'shop-hvac-equipment.webp',
+  },
+  {
+    id: 'niagara-pipes',
+    category: NIAGARA,
+    title: 'Pipe Pack – Niagara 4 (pipes + accessories)',
+    price: 49,
+    detail:
+      '378 isometric pipe fittings in 9 system colors + 15 control valves, ball valves, sensors and actuators. Same scale as the equipment – flanges fit 1:1. Full size + compact.',
+    href: 'https://buy.stripe.com/fZu28s6VTbP2aywgWCg7e0h',
+    image: 'shop-hvac-pipes.webp',
+  },
+  {
+    id: 'niagara-ahu-duct',
+    category: NIAGARA,
+    title: 'AHU, Duct & Sensors Pack – Niagara 4',
+    price: 69,
+    detail:
+      '63 AHU and duct components – fans, dampers, filters, coils, heaters, DX coil, heat recovery, duct fittings and sensors – with Status / Value / Position / Mode / Alarm layers. Full size + compact.',
+    href: 'https://buy.stripe.com/4gM14o2FD06kfSQ0XEg7e0i',
+    image: 'shop-hvac-ahu-duct.webp',
   },
 ];
 
